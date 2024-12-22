@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Наші Продукти</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #343a40;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .products-section {
+            margin-top: 30px;
+        }
+
+        .product-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+            padding: 20px 0;
+        }
+
+        .product-card {
+            background-color: #fff;
+            border-radius: 5px;
+            border: 1px solid #dee2e6;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .product-title {
+            font-size: 18px;
+            color: #343a40;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        .product-price {
+            font-size: 20px;
+            color: #007bff;
+            margin-top: 10px;
+        }
+
+        .product-description {
+            color: #6c757d;
+            font-size: 14px;
+            margin-top: 10px;
+            height: 60px;
+            overflow: hidden;
+        }
+
+        .btn-buy {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            margin-top: 15px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .btn-buy:hover {
+            background-color: #0056b3;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Наші Продукти</h1>
+    </header>
+
+    <div class="container">
+        <div class="products-section">
+            <h2>Популярні товари</h2>
+            <div class="product-list">
+                <!-- Продукт 1 -->
+                <div class="product-card">
+                    <img src="https://a.allegroimg.com/s600/035df6/9123c9194e609beea105862d349e/Xiaomi-Mi-9T-Pro-6-128GB-LodowiecNiebieski.webp" alt="Product 1">
+                    <div class="product-title">Xiomi mi 9t</div>
+                    <div class="product-price">₴5000</div>
+                    <div class="product-description">
+                        Смартфон з високою продуктивністю, чудовою камерою та великим екраном.
+                    </div>
+                    <button class="btn-buy">Купити</button>
+                </div>
+
+                <!-- Продукт 2 -->
+                <div class="product-card">
+                    <img src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSucTyk6M0oPTikMCVCcyykEZiMVoKZqnZvRw&s" alt="Product 2">
+                    <div class="product-title">Lenovo Legion Y540</div>
+                    <div class="product-price">₴29 999</div>
+                    <div class="product-description">
+                        Потужний ноутбук для роботи та розваг, з довгим часом автономної роботи.
+                    </div>
+                    <button class="btn-buy">Купити</button>
+                </div>
+
+                <!-- Продукт 3 -->
+                <div class="product-card">
+                    <img src="https://images.prom.ua/4668486902_w640_h320_pylesos-philips-kontejnernyj.jpg" alt="Product 3">
+                    <div class="product-title">PHILIPS</div>
+                    <div class="product-price">₴2500</div>
+                    <div class="product-description">
+                        Сучасний пилосос з високою потужністю і низьким рівнем шуму.
+                    </div>
+                    <button class="btn-buy">Купити</button>
+                </div>
+
+                <!-- Продукт 4 -->
+                <div class="product-card">
+                    <img src="https://football-world.com.ua/product-images/product/Nike/33466-63a5b23a75727.webp" alt="Product 4">
+                    <div class="product-title"></div>
+                    <div class="product-price">₴3000</div>
+                    <div class="product-description">
+                        Тепла і комфортна куртка з флісового матеріалу для осінньо-зимового сезону.
+                    </div>
+                    <button class="btn-buy">Купити</button>
+                </div>
+
+                <!-- Продукт 5 -->
+                <div class="product-card">
+                    <img src="https://cdn0.it4profit.com/s3/cms/category/c8/fe/c8fed38a65ca19e427ac4d2bd5ef96ac/group_1211651_11.webp" alt="Product 5">
+                    <div class="product-title">Aplle Watch</div>
+                    <div class="product-price">₴10000</div>
+                    <div class="product-description">
+                        Стильний смарт-годинник з функцією моніторингу здоров'я та трекінгу активності.
+                    </div>
+                    <button class="btn-buy">Купити</button>
+                </div>
+
+                <!-- Продукт 6 -->
+                <div class="product-card">
+                    <img src="" alt="Product 5">
+                    <div class="product-title"></div>
+                    <div class="product-price">₴10000</div>
+                    <div class="product-description">
+                        Стильний смарт-годинник з функцією моніторингу здоров'я та трекінгу активності.
+                    </div>
+                    <button class="btn-buy">Купити</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
