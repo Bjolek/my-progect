@@ -1,5 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Магазин - Головна</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Підключення CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Мій Магазин</h1>
+            <nav>
+                <ul>
+                    <li><a href="/">Головна</a></li>
+                    <li><a href="/products">Товари</a></li>
+                    <li><a href="/about_us">Про нас</a></li>
+                    <li><a href="/contact">Контакти</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    {% block main %}
+    {% endblock main %}
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,8 +59,15 @@
             margin: 0;
         }
 
-        .products-section {
+        .category-section {
             margin-top: 30px;
+        }
+
+        .category-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #343a40;
         }
 
         .product-list {
@@ -106,12 +142,15 @@
     </header>
 
     <div class="container">
-        <div class="products-section">
-            <h2>Популярні товари</h2>
+
+        <!-- Категорія: Смартфони -->
+        <div class="category-section">
+            <h2 class="category-title">Смартфони</h2>
             <div class="product-list">
+
                 <!-- Продукт 1 -->
                 <div class="product-card">
-                    <img src="https://a.allegroimg.com/s600/035df6/9123c9194e609beea105862d349e/Xiaomi-Mi-9T-Pro-6-128GB-LodowiecNiebieski.webp" alt="Product 1">
+                    <img src="https://a.allegroimg.com/s600/035df6/9123c9194e609beea105862d349e/Xiaomi-Mi-9T-Pro-6-128GB-LodowiecNiebieski.webp" alt="Xiaomi mi 9t">
                     <div class="product-title">Xiomi mi 9t</div>
                     <div class="product-price">₴5000</div>
                     <div class="product-description">
@@ -121,8 +160,107 @@
                 </div>
 
                 <!-- Продукт 2 -->
+
                 <div class="product-card">
-                    <img src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSucTyk6M0oPTikMCVCcyykEZiMVoKZqnZvRw&s" alt="Product 2">
+                    <img src="https://img.mta.ua/image/cache/data/foto/z910/910842/photos/Google-Pixel-8a-8128GB-24-Bay-01-600x600.jpg" alt="Pixel 9">
+                    <div class="product-title">Pixel 9</div>
+                    <div class="product-price">₴15000</div>
+                    <div class="product-description">
+                        Смартфон з високою продуктивністю, чудовою камерою та великим екраном.
+                    </div>
+                    <button class="btn-buy">Купити</button>
+                </div>
+
+                <!-- Продукт 3 -->
+
+                <div class="product-card">
+                    <img src="https://scdn.comfy.ua/89fc351a-22e7-41ee-8321-f8a9356ca351/https://cdn.comfy.ua/media/catalog/product/_/a/_apple_iphone_16_512gb_ultramarine_1.jpg/w_600" alt="Iphone 16">
+                    <div class="product-title">Iphone 16</div>
+                    <div class="product-price">₴20000</div>
+                    <div class="product-description">
+                        Смартфон з високою продуктивністю, чудовою камерою та великим екраном.
+                    </div>
+                    <button class="btn-buy">Купити</button>
+                </div>
+
+                <!-- Продукт 4 -->
+
+                <div class="product-card">
+                    <img src="https://cdn.samsungshop.com.ua/products/8654/cover/163343/%D0%A124%D0%A3%D0%BB%D1%8C%D1%82%D1%80%D0%B0-%D0%A4%D0%B8%D0%BE%D0%BB%D0%B5%D1%82%D0%BE%D0%B2%D1%8B%D0%B9-%E2%80%94-%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F.webp" alt="Samsung S24 Ultra">
+                    <div class="product-title">Samsung S24 Ultra</div>
+                    <div class="product-price">₴17000</div>
+                    <div class="product-description">
+                        Смартфон з високою продуктивністю, чудовою камерою та великим екраном.
+                    </div>
+                    <button class="btn-buy">Купити</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Категорія: Гаджети -->
+
+        <div class="category-section">
+            <h2 class="category-title">Гаджети</h2>
+            <div class="product-list">
+                <!-- Продукт 1 -->
+                <div class="product-card">
+                    <img src="https://cdn0.it4profit.com/s3/cms/category/c8/fe/c8fed38a65ca19e427ac4d2bd5ef96ac/group_1211651_11.webp" alt="Apple Watch">
+                    <div class="product-title">Apple Watch</div>
+                    <div class="product-price">₴10000</div>
+                    <div class="product-description">
+                        Стильний смарт-годинник з функцією моніторингу здоров'я та трекінгу активності.
+                    </div>
+                    <button class="btn-buy">Купити</button>
+                </div>
+
+                <!-- Продукт 2 -->
+                <div class="product-card">
+                    <img src="https://cdn.tehnoezh.ua/0/0/0/1/1/3/8/0/0/000113800_545_545.jpeg" alt="Galaxy Watch 5">
+                    <div class="product-title">Galaxy Watch 5</div>
+                    <div class="product-price">₴9000</div>
+                    <div class="product-description">
+                        Стильний смарт-годинник з функцією моніторингу здоров'я та трекінгу активності.
+                    </div>
+                    <button class="btn-buy">Купити</button>
+                </div>
+
+                <!-- Продукт 3 -->
+
+                <div class="product-card">
+                    <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQ7l1rTrff60E6y49w4rkPdOqdGPGe8d-S40lYtOo9sVMYHplgPCRY7Uvq-AFYemEmRLnk0ejpHHqsf4adHntjhgStV0x8yOXjweuw-g2jhdlKoPId0Pz_NM8-szG0AJ1rrif8NdPs&usqp=CAc" alt="Forever">
+                    <div class="product-title">Forever</div>
+                    <div class="product-price">₴5000</div>
+                    <div class="product-description">
+                        Стильний смарт-годинник з функцією моніторингу здоров'я та трекінгу активності.
+                    </div>
+                    <button class="btn-buy">Купити</button>
+                </div>
+
+                <!-- Продукт 4 -->
+
+                <div class="product-card">
+                    <img src="https://cdn.tehnoezh.ua/0/0/0/1/1/3/8/0/0/000113800_545_545.jpeg" alt="Galaxy Watch 5">
+                    <div class="product-title">Galaxy Watch 5</div>
+                    <div class="product-price">₴9000</div>
+                    <div class="product-description">
+                        Стильний смарт-годинник з функцією моніторингу здоров'я та трекінгу активності.
+                    </div>
+                    <button class="btn-buy">Купити</button>
+                </div>
+
+            </div>
+        </div>
+
+
+
+        <!-- Категорія: Ноутбуки -->
+        <div class="category-section">
+            <h2 class="category-title">Ноутбуки</h2>
+            <div class="product-list">
+
+                <!-- Продукт 1 -->
+                <div class="product-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSucTyk6M0oPTikMCVCcyykEZiMVoKZqnZvRw&s" alt="Lenovo Legion Y540">
                     <div class="product-title">Lenovo Legion Y540</div>
                     <div class="product-price">₴29 999</div>
                     <div class="product-description">
@@ -131,9 +269,39 @@
                     <button class="btn-buy">Купити</button>
                 </div>
 
+                <!-- Продукт 2 -->
+
+                <div class="product-card">
+                    <img src="https://files.foxtrot.com.ua/PhotoNew/img_0_58_26293_0_1_01xywr.jpg" alt="Lenovo Legion 5 Pro">
+                    <div class="product-title">Lenovo Legion 5 Pro</div>
+                    <div class="product-price">₴49 999</div>
+                    <div class="product-description">
+                        Потужний ноутбук для роботи та розваг, з довгим часом автономної роботи.
+                    </div>
+                    <button class="btn-buy">Купити</button>
+                </div>
+
+                <!-- Продукт 3 -->
+
+                <div class="product-card">
+                    <img src="https://i.eldorado.ua//goods_images/1039096/8571327-1728301419.jpg" alt="ASUS">
+                    <div class="product-title">ASUS</div>
+                    <div class="product-price">₴59 999</div>
+                    <div class="product-description">
+                        Потужний ноутбук для роботи та розваг, з довгим часом автономної роботи.
+                    </div>
+                    <button class="btn-buy">Купити</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Категорія: Побутова техніка -->
+        <div class="category-section">
+            <h2 class="category-title">Побутова техніка</h2>
+            <div class="product-list">
                 <!-- Продукт 3 -->
                 <div class="product-card">
-                    <img src="https://images.prom.ua/4668486902_w640_h320_pylesos-philips-kontejnernyj.jpg" alt="Product 3">
+                    <img src="https://images.prom.ua/4668486902_w640_h320_pylesos-philips-kontejnernyj.jpg" alt="PHILIPS">
                     <div class="product-title">PHILIPS</div>
                     <div class="product-price">₴2500</div>
                     <div class="product-description">
@@ -141,42 +309,26 @@
                     </div>
                     <button class="btn-buy">Купити</button>
                 </div>
+            </div>
+        </div>
 
+        <!-- Категорія: Одяг -->
+        <div class="category-section">
+            <h2 class="category-title">Одяг</h2>
+            <div class="product-list">
                 <!-- Продукт 4 -->
                 <div class="product-card">
-                    <img src="https://football-world.com.ua/product-images/product/Nike/33466-63a5b23a75727.webp" alt="Product 4">
-                    <div class="product-title"></div>
+                    <img src="https://football-world.com.ua/product-images/product/Nike/33466-63a5b23a75727.webp" alt="Куртка Nike">
+                    <div class="product-title">Куртка Nike</div>
                     <div class="product-price">₴3000</div>
                     <div class="product-description">
                         Тепла і комфортна куртка з флісового матеріалу для осінньо-зимового сезону.
                     </div>
                     <button class="btn-buy">Купити</button>
                 </div>
-
-                <!-- Продукт 5 -->
-                <div class="product-card">
-                    <img src="https://cdn0.it4profit.com/s3/cms/category/c8/fe/c8fed38a65ca19e427ac4d2bd5ef96ac/group_1211651_11.webp" alt="Product 5">
-                    <div class="product-title">Aplle Watch</div>
-                    <div class="product-price">₴10000</div>
-                    <div class="product-description">
-                        Стильний смарт-годинник з функцією моніторингу здоров'я та трекінгу активності.
-                    </div>
-                    <button class="btn-buy">Купити</button>
-                </div>
-
-                <!-- Продукт 6 -->
-                <div class="product-card">
-                    <img src="" alt="Product 6">
-                    <div class="product-title"></div>
-                    <div class="product-price">₴10000</div>
-                    <div class="product-description">
-                        Стильний смарт-годинник з функцією моніторингу здоров'я та трекінгу активності.
-                    </div>
-                    <button class="btn-buy">Купити</button>
-                </div>
             </div>
         </div>
-    </div>
+
 
 </body>
 </html>

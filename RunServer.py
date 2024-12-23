@@ -6,7 +6,7 @@ db_name = "Site.db"
 
 @app.route("/")
 def base():
-    return render_template("base.html")
+    return render_template("main.html")
 
 @app.route("/about_us")
 def about_us():

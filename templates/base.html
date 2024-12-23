@@ -4,78 +4,7 @@
     <meta charset="UTF-8">
     <title>Магазин - Головна</title>
     <link rel="stylesheet" href="styles.css"> <!-- Підключення CSS -->
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f8f9fa;
-        }
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        header {
-            background-color: #343a40;
-            color: #fff;
-            padding: 10px 0;
-        }
-        header h1 {
-            margin: 0;
-            text-align: center;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .hero {
-            text-align: center;
-            background-color: #007bff;
-            color: #fff;
-            padding: 50px 0;
-        }
-        .hero h2 {
-            margin-bottom: 20px;
-        }
-        .hero .btn {
-            background-color: #ffc107;
-            color: #343a40;
-            padding: 10px 20px;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 5px;
-        }
-        .categories, .popular-products {
-            margin: 30px 0;
-        }
-        .categories h3, .popular-products h3 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .category-list, .product-list {
-            display: flex;
-            justify-content: space-around;
-            gap: 20px;
-        }
-        .category-item, .product-item {
-            background-color: #fff;
-            border: 1px solid #dee2e6;
-            padding: 20px;
-            text-align: center;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-    </style>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     <header>
@@ -92,55 +21,9 @@
         </div>
     </header>
 
-    <main>
-        <section class="hero">
-            <div class="container">
-                <h2>Ласкаво просимо до нашого магазину!</h2>
-                <p>Знайдіть усе, що вам потрібно, у нашому широкому асортименті товарів.</p>
-                <a href="/products" class="btn">Переглянути товари</a>
-            </div>
-        </section>
+    {% block main %}
+    {% endblock main %}
 
-        <section class="categories">
-            <div class="container">
-                <h3>Категорії товарів</h3>
-                <div class="category-list">
-                    <div class="category-item">
-                        <h4>Електроніка</h4>
-                        <p>Смартфони, ноутбуки, аксесуари.</p>
-                    </div>
-                    <div class="category-item">
-                        <h4>Одяг</h4>
-                        <p>Модний одяг для всіх сезонів.</p>
-                    </div>
-                    <div class="category-item">
-                        <h4>Побутова техніка</h4>
-                        <p>Техніка для дому та кухні.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="popular-products">
-            <div class="container">
-                <h3>Популярні товари</h3>
-                <div class="product-list">
-                    <div class="product-item">
-                        <h4>Iphone 15</h4>
-                        <p>Ціна: 40 999 грн</p>
-                    </div>
-                    <div class="product-item">
-                        <h4>Lenovo Legion Y 540</h4>
-                        <p>Ціна: 29 999 грн</p>
-                    </div>
-                    <div class="product-item">
-                        <h4>Пилосос PHILIPS</h4>
-                        <p>Ціна: 5 499 грн</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
 
 </body>
 </html>
