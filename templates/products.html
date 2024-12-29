@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Магазин - Головна</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Підключення CSS -->
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
@@ -292,6 +292,19 @@
                     </div>
                     <button class="btn-buy">Купити</button>
                 </div>
+
+                <!-- Продукт 4 -->
+
+
+                <div class="product-card">
+                    <img src="https://texnomarket.in.ua/thumbs/s600_600__r/aHR0cHM6Ly9jZG4uY29tZnkudWEvbWVkaWEvY2F0YWxvZy9wcm9kdWN0L2NhY2hlLzQvc21hbGxfaW1hZ2UvNjAweC82MmRlZmM3ZjQ2ZjNmYmZjOGFmY2QxMTIyMjdkMTE4MS96L3EvenFuOHZudnkuanBn.webp" alt="ASUS">
+                    <div class="product-title">lenovo Gaming 3</div>
+                    <div class="product-price">₴25 000</div>
+                    <div class="product-description">
+                        Потужний ноутбук для роботи та розваг, з довгим часом автономної роботи.
+                    </div>
+                    <button class="btn-buy">Купити</button>
+                </div>
             </div>
         </div>
 
@@ -299,16 +312,18 @@
         <div class="category-section">
             <h2 class="category-title">Побутова техніка</h2>
             <div class="product-list">
-                <!-- Продукт 3 -->
+                <!-- Продукт 1 -->
+                {% for element in furniture %}
                 <div class="product-card">
-                    <img src="https://images.prom.ua/4668486902_w640_h320_pylesos-philips-kontejnernyj.jpg" alt="PHILIPS">
-                    <div class="product-title">PHILIPS</div>
-                    <div class="product-price">₴2500</div>
+                    <img src="{{element[1]}}" alt="PHILIPS">
+                    <div class="product-title">{{element[2]}}</div>
+                    <div class="product-price">₴{{element[3]}}</div>
                     <div class="product-description">
-                        Сучасний пилосос з високою потужністю і низьким рівнем шуму.
+                        {{element[4]}}
                     </div>
                     <button class="btn-buy">Купити</button>
                 </div>
+                {% endfor %}
             </div>
         </div>
 
@@ -316,16 +331,20 @@
         <div class="category-section">
             <h2 class="category-title">Одяг</h2>
             <div class="product-list">
-                <!-- Продукт 4 -->
+                <!-- Продукт 1 -->
+                {% for element in clothes %}
                 <div class="product-card">
-                    <img src="https://football-world.com.ua/product-images/product/Nike/33466-63a5b23a75727.webp" alt="Куртка Nike">
-                    <div class="product-title">Куртка Nike</div>
-                    <div class="product-price">₴3000</div>
+                    <img src="{{element[1]}}" alt="Куртка Nike">
+                    <div class="product-title">{{element[2]}}</div>
+                    <div class="product-price">₴{{element[3]}}</div>
                     <div class="product-description">
-                        Тепла і комфортна куртка з флісового матеріалу для осінньо-зимового сезону.
+                       {{element[4]}}
                     </div>
                     <button class="btn-buy">Купити</button>
                 </div>
+                {% endfor %}
+
+
             </div>
         </div>
 
