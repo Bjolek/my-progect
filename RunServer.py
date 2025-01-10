@@ -18,6 +18,12 @@ furniture = [
     (3,"https://coyot.ua/content/images/11/325x325l50nn0/44281897508070.jpeg","CLATRONIX",2300,"Сучасний пилосос з високою потужністю і низьким рівнем шуму." ),
 ]
 
+Leptops = [
+    (0, "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSucTyk6M0oPTikMCVCcyykEZiMVoKZqnZvRw&s","Lenovo Legion Y540",29999,"Потужний ноутбук для роботи та розваг, з довгим часом автономної роботи.."),
+    (1,"https://files.foxtrot.com.ua/PhotoNew/img_0_58_26293_0_1_01xywr.jpg","Lenovo Legion 5 Pro",49999,"Потужний ноутбук для роботи та розваг, з довгим часом автономної роботи." ),
+    (2, "https://i.eldorado.ua//goods_images/1039096/8571327-1728301419.jpg","ASUS ROG Strix",59999,"Потужний ноутбук для роботи та розваг, з довгим часом автономної роботи."),
+    (3,"https://texnomarket.in.ua/thumbs/s600_600__r/aHR0cHM6Ly9jZG4uY29tZnkudWEvbWVkaWEvY2F0YWxvZy9wcm9kdWN0L2NhY2hlLzQvc21hbGxfaW1hZ2UvNjAweC82MmRlZmM3ZjQ2ZjNmYmZjOGFmY2QxMTIyMjdkMTE4MS96L3EvenFuOHZudnkuanBn.webp","lenovo Gaming 3",25000,"Потужний ноутбук для роботи та розваг, з довгим часом автономної роботи." ),]
+
 @app.route("/")
 def base():
     return render_template("main.html")
@@ -32,6 +38,6 @@ def contact():
 
 @app.route("/products")
 def products():
-    return render_template("products.html", clothes=clothes,furniture=furniture)
+    return render_template("products.html", clothes=clothes,furniture=furniture,Leptops=Leptops)
 
 app.run()

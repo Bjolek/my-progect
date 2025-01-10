@@ -259,52 +259,17 @@
             <div class="product-list">
 
                 <!-- Продукт 1 -->
+                {% for element in Leptops %}
                 <div class="product-card">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSucTyk6M0oPTikMCVCcyykEZiMVoKZqnZvRw&s" alt="Lenovo Legion Y540">
-                    <div class="product-title">Lenovo Legion Y540</div>
-                    <div class="product-price">₴29 999</div>
+                    <img src="{{element[1]}}" alt="Legion">
+                    <div class="product-title">{{element[2]}}</div>
+                    <div class="product-price">₴{{element[3]}}</div>
                     <div class="product-description">
-                        Потужний ноутбук для роботи та розваг, з довгим часом автономної роботи.
+                        {{element[4]}}
                     </div>
                     <button class="btn-buy">Купити</button>
                 </div>
-
-                <!-- Продукт 2 -->
-
-                <div class="product-card">
-                    <img src="https://files.foxtrot.com.ua/PhotoNew/img_0_58_26293_0_1_01xywr.jpg" alt="Lenovo Legion 5 Pro">
-                    <div class="product-title">Lenovo Legion 5 Pro</div>
-                    <div class="product-price">₴49 999</div>
-                    <div class="product-description">
-                        Потужний ноутбук для роботи та розваг, з довгим часом автономної роботи.
-                    </div>
-                    <button class="btn-buy">Купити</button>
-                </div>
-
-                <!-- Продукт 3 -->
-
-                <div class="product-card">
-                    <img src="https://i.eldorado.ua//goods_images/1039096/8571327-1728301419.jpg" alt="ASUS">
-                    <div class="product-title">ASUS</div>
-                    <div class="product-price">₴59 999</div>
-                    <div class="product-description">
-                        Потужний ноутбук для роботи та розваг, з довгим часом автономної роботи.
-                    </div>
-                    <button class="btn-buy">Купити</button>
-                </div>
-
-                <!-- Продукт 4 -->
-
-
-                <div class="product-card">
-                    <img src="https://texnomarket.in.ua/thumbs/s600_600__r/aHR0cHM6Ly9jZG4uY29tZnkudWEvbWVkaWEvY2F0YWxvZy9wcm9kdWN0L2NhY2hlLzQvc21hbGxfaW1hZ2UvNjAweC82MmRlZmM3ZjQ2ZjNmYmZjOGFmY2QxMTIyMjdkMTE4MS96L3EvenFuOHZudnkuanBn.webp" alt="ASUS">
-                    <div class="product-title">lenovo Gaming 3</div>
-                    <div class="product-price">₴25 000</div>
-                    <div class="product-description">
-                        Потужний ноутбук для роботи та розваг, з довгим часом автономної роботи.
-                    </div>
-                    <button class="btn-buy">Купити</button>
-                </div>
+                {% endfor %}
             </div>
         </div>
 
