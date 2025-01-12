@@ -147,53 +147,18 @@
         <div class="category-section">
             <h2 class="category-title">Смартфони</h2>
             <div class="product-list">
-
                 <!-- Продукт 1 -->
+                {% for element in Phones %}
                 <div class="product-card">
-                    <img src="https://a.allegroimg.com/s600/035df6/9123c9194e609beea105862d349e/Xiaomi-Mi-9T-Pro-6-128GB-LodowiecNiebieski.webp" alt="Xiaomi mi 9t">
-                    <div class="product-title">Xiomi mi 9t</div>
-                    <div class="product-price">₴5000</div>
+                    <img src="{{element[1]}}" alt="Phones">
+                    <div class="product-title">{{element[2]}}</div>
+                    <div class="product-price">₴{{element[3]}}</div>
                     <div class="product-description">
-                        Смартфон з високою продуктивністю, чудовою камерою та великим екраном.
+                        {{element[4]}}
                     </div>
-                    <button class="btn-buy">Купити</button>
+                    <button class="btn-buy"><a href =/buy> Купити</a></button>
                 </div>
-
-                <!-- Продукт 2 -->
-
-                <div class="product-card">
-                    <img src="https://img.mta.ua/image/cache/data/foto/z910/910842/photos/Google-Pixel-8a-8128GB-24-Bay-01-600x600.jpg" alt="Pixel 9">
-                    <div class="product-title">Pixel 9</div>
-                    <div class="product-price">₴15000</div>
-                    <div class="product-description">
-                        Смартфон з високою продуктивністю, чудовою камерою та великим екраном.
-                    </div>
-                    <button class="btn-buy">Купити</button>
-                </div>
-
-                <!-- Продукт 3 -->
-
-                <div class="product-card">
-                    <img src="https://scdn.comfy.ua/89fc351a-22e7-41ee-8321-f8a9356ca351/https://cdn.comfy.ua/media/catalog/product/_/a/_apple_iphone_16_512gb_ultramarine_1.jpg/w_600" alt="Iphone 16">
-                    <div class="product-title">Iphone 16</div>
-                    <div class="product-price">₴20000</div>
-                    <div class="product-description">
-                        Смартфон з високою продуктивністю, чудовою камерою та великим екраном.
-                    </div>
-                    <button class="btn-buy">Купити</button>
-                </div>
-
-                <!-- Продукт 4 -->
-
-                <div class="product-card">
-                    <img src="https://cdn.samsungshop.com.ua/products/8654/cover/163343/%D0%A124%D0%A3%D0%BB%D1%8C%D1%82%D1%80%D0%B0-%D0%A4%D0%B8%D0%BE%D0%BB%D0%B5%D1%82%D0%BE%D0%B2%D1%8B%D0%B9-%E2%80%94-%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F.webp" alt="Samsung S24 Ultra">
-                    <div class="product-title">Samsung S24 Ultra</div>
-                    <div class="product-price">₴17000</div>
-                    <div class="product-description">
-                        Смартфон з високою продуктивністю, чудовою камерою та великим екраном.
-                    </div>
-                    <button class="btn-buy">Купити</button>
-                </div>
+                {% endfor %}
             </div>
         </div>
 
@@ -203,51 +168,17 @@
             <h2 class="category-title">Гаджети</h2>
             <div class="product-list">
                 <!-- Продукт 1 -->
+                {% for element in Gadgets %}
                 <div class="product-card">
-                    <img src="https://cdn0.it4profit.com/s3/cms/category/c8/fe/c8fed38a65ca19e427ac4d2bd5ef96ac/group_1211651_11.webp" alt="Apple Watch">
-                    <div class="product-title">Apple Watch</div>
-                    <div class="product-price">₴10000</div>
+                    <img src="{{element[1]}}" alt="Watch">
+                    <div class="product-title">{{element[2]}}</div>
+                    <div class="product-price">₴{{element[3]}}</div>
                     <div class="product-description">
-                        Стильний смарт-годинник з функцією моніторингу здоров'я та трекінгу активності.
+                        {{element[4]}}
                     </div>
-                    <button class="btn-buy">Купити</button>
+                    <button class="btn-buy"><a href =/buy> Купити</a></button>
                 </div>
-
-                <!-- Продукт 2 -->
-                <div class="product-card">
-                    <img src="https://cdn.tehnoezh.ua/0/0/0/1/1/3/8/0/0/000113800_545_545.jpeg" alt="Galaxy Watch 5">
-                    <div class="product-title">Galaxy Watch 5</div>
-                    <div class="product-price">₴9000</div>
-                    <div class="product-description">
-                        Стильний смарт-годинник з функцією моніторингу здоров'я та трекінгу активності.
-                    </div>
-                    <button class="btn-buy">Купити</button>
-                </div>
-
-                <!-- Продукт 3 -->
-
-                <div class="product-card">
-                    <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQ7l1rTrff60E6y49w4rkPdOqdGPGe8d-S40lYtOo9sVMYHplgPCRY7Uvq-AFYemEmRLnk0ejpHHqsf4adHntjhgStV0x8yOXjweuw-g2jhdlKoPId0Pz_NM8-szG0AJ1rrif8NdPs&usqp=CAc" alt="Forever">
-                    <div class="product-title">Forever</div>
-                    <div class="product-price">₴5000</div>
-                    <div class="product-description">
-                        Стильний смарт-годинник з функцією моніторингу здоров'я та трекінгу активності.
-                    </div>
-                    <button class="btn-buy">Купити</button>
-                </div>
-
-                <!-- Продукт 4 -->
-
-                <div class="product-card">
-                    <img src="https://cdn.tehnoezh.ua/0/0/0/1/1/3/8/0/0/000113800_545_545.jpeg" alt="Galaxy Watch 5">
-                    <div class="product-title">Galaxy Watch 5</div>
-                    <div class="product-price">₴9000</div>
-                    <div class="product-description">
-                        Стильний смарт-годинник з функцією моніторингу здоров'я та трекінгу активності.
-                    </div>
-                    <button class="btn-buy">Купити</button>
-                </div>
-
+                {% endfor %}
             </div>
         </div>
 
@@ -267,7 +198,7 @@
                     <div class="product-description">
                         {{element[4]}}
                     </div>
-                    <button class="btn-buy">Купити</button>
+                    <button class="btn-buy"><a href =/buy> Купити</a></button>
                 </div>
                 {% endfor %}
             </div>
@@ -286,7 +217,7 @@
                     <div class="product-description">
                         {{element[4]}}
                     </div>
-                    <button class="btn-buy">Купити</button>
+                    <button class="btn-buy"><a href =/buy> Купити</a></button>
                 </div>
                 {% endfor %}
             </div>
@@ -305,7 +236,7 @@
                     <div class="product-description">
                        {{element[4]}}
                     </div>
-                    <button class="btn-buy">Купити</button>
+                    <button class="btn-buy"><a href =/buy> Купити</a></button>
                 </div>
                 {% endfor %}
 
